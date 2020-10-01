@@ -1,0 +1,47 @@
+		//for (index => item in rullo2) {
+			//BitmapData.loadFromFile('img/$item').onComplete(function(bitmapData){
+			//var bitmap = new Bitmap (bitmapData);
+			//bitmap.scaleX = 0.25;
+			//bitmap.scaleY = 0.25;
+			//bitmap.x = 220;
+			//bitmap.y = (index * 40) + 40;
+			////bits.push(bitmap);
+			//addChild(bitmap);
+		//});
+		//}
+		//
+		//for (index => item in rullo3) {
+			//BitmapData.loadFromFile('img/$item').onComplete(function(bitmapData){
+			//var bitmap = new Bitmap (bitmapData);
+			//bitmap.scaleX = 0.25;
+			//bitmap.scaleY = 0.25;
+			//bitmap.x = 380;
+			//bitmap.y = (index * 40) + 40;
+			////bits.push(bitmap);
+			//addChild(bitmap);
+		//});
+		//}
+		//
+		//for (index => item in rullo4) {
+			//BitmapData.loadFromFile('img/$item').onComplete(function(bitmapData){
+			//var bitmap = new Bitmap (bitmapData);
+			//bitmap.scaleX = 0.25;
+			//bitmap.scaleY = 0.25;
+			//bitmap.x = 540;
+			//bitmap.y = (index * 40) + 40;
+			////bits.push(bitmap);
+			//addChild(bitmap);
+		//});
+		//}
+		//
+		//for (index => item in rullo5) {
+			//BitmapData.loadFromFile('img/$item').onComplete(function(bitmapData){
+			//var bitmap = new Bitmap (bitmapData);
+			//bitmap.scaleX = 0.25;
+			//bitmap.scaleY = 0.25;
+			//bitmap.x = 700;
+			//bitmap.y = (index * 40) + 40;
+			////bits.push(bitmap);
+			//addChild(bitmap);
+		//});
+		//}
