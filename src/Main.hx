@@ -31,12 +31,30 @@ class Main extends Sprite {
 		Random.shuffle(rullo4);
 		Random.shuffle(rullo5);
 		
-
+		addChild(reelOne);
+		addChild(reelTwo);
+		addChild(reelThree);
+		addChild(reelFour);
+		addChild(reelFive);
 		
 		var frameMask : Shape = new Shape();
-		frameMask.graphics.beginFill(0xFF00FF);
-		frameMask.graphics.drawRect(5, 0, 800, 155);
+		frameMask.graphics.beginFill(0x0000FF);
+		frameMask.graphics.drawRect(0, 0, 804, 485);
 		frameMask.graphics.endFill();
+		addChild(frameMask);
+		
+		
+			
+		BitmapData.loadFromFile("img/ContainerReels.png").onComplete(function(bitmapData){
+			var board = new Bitmap (bitmapData);
+			board.x = 0;
+			board.y = 0;
+			addChild(board);
+			board.mask = frameMask;
+		});
+
+		
+		
 		
 		
 		for (index => item in rullo1) {
@@ -47,10 +65,8 @@ class Main extends Sprite {
 			reelOne.addChild(bitmap);	
 		});
 		}		
-		addChild(reelOne);
-		
-		
-		
+		reelOne.mask = frameMask;
+
 		for (index => item in rullo2) {
 			BitmapData.loadFromFile('img/$item').onComplete(function(bitmapData){
 			var bitmap = new Bitmap (bitmapData);
@@ -59,7 +75,6 @@ class Main extends Sprite {
 			reelTwo.addChild(bitmap);
 		});
 		}		
-		addChild(reelTwo);
 		
 		for (index => item in rullo3) {
 			BitmapData.loadFromFile('img/$item').onComplete(function(bitmapData){
@@ -69,7 +84,6 @@ class Main extends Sprite {
 			reelThree.addChild(bitmap);
 		});
 		}		
-		addChild(reelThree);
 		
 		for (index => item in rullo4) {
 			BitmapData.loadFromFile('img/$item').onComplete(function(bitmapData){
@@ -79,7 +93,6 @@ class Main extends Sprite {
 			reelFour.addChild(bitmap);
 		});
 		}		
-		addChild(reelFour);
 		
 		for (index => item in rullo5) {
 			BitmapData.loadFromFile('img/$item').onComplete(function(bitmapData){
@@ -89,22 +102,16 @@ class Main extends Sprite {
 			reelFive.addChild(bitmap);
 		});
 		}		
-		addChild(reelFive);
-		
-		frameMask.mask = reelOne;
-
 		
 
-		
+
+			
 
 	
+	
 		
-		BitmapData.loadFromFile("img/ContainerReels.png").onComplete(function(bitmapData){
-			var bitmap = new Bitmap (bitmapData);
-			bitmap.x = 0;
-			bitmap.y = 0;
-			addChild(bitmap);
-		});
+		
+		
 			
 		BitmapData.loadFromFile ("img/Button.png").onComplete (function (bitmapData) {
 			var bitmap = new Bitmap (bitmapData);
@@ -118,7 +125,7 @@ class Main extends Sprite {
 			this.addChild (button);
 			
 			button.addEventListener (MouseEvent.MOUSE_DOWN, function (e) {
-				Actuate.tween (reelOne, 0.5, { y: -485 * 2 }).ease (Quad.easeOut);
+				Actuate.tween (reelOne, 0.5, { y: -485 * 4 }).ease (Quad.easeOut);
 				Actuate.tween (reelTwo, 0.5, { y: -485 * 2}).ease (Quad.easeOut).delay (0.25);
 				Actuate.tween (reelThree, 0.5, { y: -485 * 2}).ease (Quad.easeOut).delay (0.50);
 				Actuate.tween (reelFour, 0.5, { y: -485 * 2}).ease (Quad.easeOut).delay (0.75);
@@ -129,11 +136,12 @@ class Main extends Sprite {
 		
 
 		
-		
+			
 		
 		
 		
 	}
 
 }
+
 
